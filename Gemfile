@@ -46,3 +46,5 @@ group :development do
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.1'

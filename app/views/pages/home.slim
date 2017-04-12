@@ -1,42 +1,68 @@
 .container
   .col-md-12
     .row
-      .row
-        .col-md-3.nav-left
-          | PRESTON MATHESON
-        .col-md-9.nav-right
-          | HOME ABOUT ME CONTACT BLOG PORTFOLIO LOGIN REGISTER
+      .row#nav-bar
+        .col-md-1.nav-left
+          |PM
+
+        .col-md-11.nav-right
+          = link_to 'HOME', root_path 
+          = link_to 'ABOUT ME', class: "about_me" 
+          = link_to 'CONTACT', class: "contact" 
+          a BLOG 
+          a PORTFOLIO  
+          a LOGIN 
+          a REGISTER
       .row
         .wrapper
-          h1 Preston Matheson
-          h3 Developer | Photographer | Adventurer
-          .col-md-6.btn.btn-primary
-            |test
-          .col-md-6.btn.btn-primary
-            |test
+          .container.home
+            h1 Preston Matheson
+            h3 Developer | Photographer | Adventurer 
+            .btns           
+              .btn.btn-default.btn-lg.left-btn#left-btn
+                |
+              .btn.btn-default.btn-lg#right-btn
+                |
       .row
         .about_me
-          h1 My Story
-          h3 Why Coding?
-          p I've spent years learning to balance my creative and analytical sides. In college I studied both music AND pre-med. On the one hand I had a love for the beauty of creating something that could influence how people felt just by listening to something that I wrote. On the other hand I had to fight to stay caught up in my calculus and science classes hoping one day to become a surgeon and to save lives. Eventually the struggle between the two ends came to the point I felt I had to choose between Music or Medicine. I decided to take some time to try and evaluate what I really wanted to do with my life. It was during this time that I found coding. I began to realize something. I could satisfy the two sides that seemed to conflict for so long. I could have my challenging logic on the back-end and on the front-end still get to design things that were not only beautiful, but can help the user easily find exactly what they are looking for. I found the perfect balance of logic and creativity. Now I'm here, ready to conquor the coding world one bug at a time.
-          .col-md-6
-            h3 Blog Posts
-            .btn.btn-primary
-              | Posts
-          .col-md-6
-            h3 Portfolio
-            .btn.btn-primary
-              | Projects
+          .container
+            .card-block
+              h1 My Story
+              h3 Why Coding?
+              p I've spent years learning to balance my creative and analytical sides. In college I studied both music AND pre-med. On the one hand I had a love for the beauty of creating something that could influence how people felt just by listening to something that I wrote. On the other hand I had to fight to stay caught up in my calculus and science classes hoping one day to become a surgeon and to save lives. Eventually the struggle between the two ends came to the point I felt I had to choose between Music or Medicine. I decided to take some time to try and evaluate what I really wanted to do with my life. It was during this time that I found coding. I began to realize something. I could satisfy the two sides that seemed to conflict for so long. I could have my challenging logic on the back-end and on the front-end still get to design things that were not only beautiful, but can help the user easily find exactly what they are looking for. I found the perfect balance of logic and creativity. Now I'm here, ready to conquor the coding world one bug at a time.
+              .col-md-6
+                h3 Blog Posts
+                .btn.btn-primary
+                  | Posts
+              .col-md-6
+                h3 Portfolio
+                .btn.btn-primary
+                  | Projects
       .row
         .contact
-          .card
-            h1 Would you like to work together?
-            h3 Phone
-            p = number_to_phone "8017093615"
-            h3 Email
-            p
-              a href="mailto:pmphoto123@gmail.com?subject=PortfolioContact"  Email me
-            iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.4814446959954!2d-111.8997175847145!3d40.685393279334846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87528a5193685977%3A0xcd7ee66967d2cb73!2s3970+Howick+St%2C+Millcreek%2C+UT+84107!5e0!3m2!1sen!2sus!4v1489167939556" width="450" height="450" frameborder="0" style="border:0" allowfullscreen
+          .row.container.contact-me
+            .contact__me
+              h1 Would you like to work together?
+              .col-md-5.info
+                h3 Phone
+                p = number_to_phone "8017093615"
+                h3 Email
+                a href="mailto:pmphoto123@gmail.com?subject=PortfolioContact" Email me
+              .col-md-7.avatar
+                = image_tag "Smaller_profile_pic copy.jpg", width: "300"
       .row
         .footer
-          |I'M THE FOOTER
+          a href="https://www.facebook.com/preston.matheson" target="_blank"
+            i class="fa fa-facebook-square" aria-hidden="true"
+          a href="https://twitter.com/pmphoto123" target="_blank"
+            i class="fa fa-twitter-square" aria-hidden="true"
+          a href="https://www.instagram.com/theprestonjames/?hl=en" target="_blank"
+            i class="fa fa-instagram" aria-hidden="true"
+          a href="https://github.com/prestonmatheson" target="_blank" 
+            i class="fa fa-github-square" aria-hidden="true"
+          a href="https://www.linkedin.com/in/preston-matheson-7394b4ba/" target='_blank'
+            i class="fa fa-linkedin-square" aria-hidden="true"
+
+
+
+
