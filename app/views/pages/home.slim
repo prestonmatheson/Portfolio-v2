@@ -3,13 +3,13 @@
     .row
       .row#nav-bar
         .col-md-1.nav-left
-          |PM
+          | PM
 
         .col-md-11.nav-right
           = link_to 'HOME', root_path 
-          = link_to 'ABOUT ME', class: "about_me" 
-          = link_to 'CONTACT', class: "contact" 
-          a BLOG 
+          a href="#about_me" ABOUT ME 
+          a href="#contact" CONTACT  
+          a href="blogs#index" BLOG
           a PORTFOLIO  
           a LOGIN 
           a REGISTER
@@ -24,7 +24,7 @@
               .btn.btn-default.btn-lg#right-btn
                 |
       .row
-        .about_me
+        #about_me
           .container
             .card-block
               h1 My Story
@@ -39,7 +39,7 @@
                 .btn.btn-primary
                   | Projects
       .row
-        .contact
+        #contact
           .row.container.contact-me
             .contact__me
               h1 Would you like to work together?
