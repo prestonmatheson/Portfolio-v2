@@ -2,11 +2,18 @@
 @import bootstrap
 @import font-awesome-sprockets
 @import font-awesome
+@import url('https://fonts.googleapis.com/css?family=Architects+Daughter|Coda')
 
+h1     
+  font-family: 'Architects Daughter', cursive
+  font-size: 54px
 
+h3
+  font-family: 'Coda', cursive
 
 .container
   width: 100vw
+  font-family: 'Coda', cursive
 
 #nav-bar
   background: white
@@ -18,10 +25,8 @@
   padding: 16px 13px 10px
 
 .nav-left
-  border: 1px solid black
 
 .nav-right
-  border: 1px solid green
   text-align: right
   text-decoration: none
   top: 30%
@@ -35,13 +40,12 @@ a:hover
   cursor: pointer
 
 .wrapper
-  background: url(nature-forest-trees-fog.jpeg) no-repeat center center fixed
+  background: url(foggy.jpg) no-repeat center center fixed
   -webkit-background-size: cover
   -moz-background-size: cover
   -o-background-size: cover
   background-size: cover
   color: white
-  border: 1px solid brown
   text-align: center
   height: 100vh
   position: relative
@@ -49,7 +53,14 @@ a:hover
 .home
   height: 100vh
   position: absolute
-  top: 41%
+  top: 32%
+
+.center-content
+  margin: 0 auto
+  max-width: 475px
+  background-color: rgba(0, 0, 0, 0.5)
+  font-family: 'Architects Daughter', cursive
+  border-radius: 2px
 
 .btns
   width: 56%
@@ -59,24 +70,23 @@ a:hover
   margin: 0px auto 0
   padding: 10px 0
 
-#left-btn
-  width: 32%
+.btn-default
+  color: #fff
+  border-color: #fff
+  background-color: rgba(255, 255, 255, 0.15)
 
-#right-btn
-  width: 32%
-
-.left-btn
-  margin-right: 5px
+.btn-default:hover
+  color: #fff
+  background-color: rgba(0, 0, 0, 0.5)
+  border-color: rgba(255, 255, 255, 0.15)
 
 #about_me
-  border: 1px solid blue
-  background: url(desk.jpeg) no-repeat center center fixed
+  background: url(coffee-bean.jpg) no-repeat center center fixed
   -webkit-background-size: cover
   -moz-background-size: cover
   -o-background-size: cover
   background-size: cover
   color: white
-  border: 1px solid brown
   text-align: center
   height: 100vh
   position: relative
@@ -87,16 +97,17 @@ a:hover
   margin-right: 31px
   max-width: 60%
   left: 19%
+  background-color: rgba(216, 234, 240, 0.14)
+  padding-bottom: 21px
+  border-radius: 2px
 
 #contact
-  border: 1px solid black
-  background: url(desk.jpeg) no-repeat center center fixed
+  background: url(coffee-bean.jpg) no-repeat center center fixed
   -webkit-background-size: cover
   -moz-background-size: cover
   -o-background-size: cover
   background-size: cover
   color: white
-  border: 1px solid brown
   text-align: center
   height: 100vh
   position: relative
@@ -107,6 +118,9 @@ a:hover
   margin-right: 31px
   max-width: 63%
   left: 18%
+  background-color: rgba(216, 234, 240, 0.14)
+  padding-bottom: 59px
+  border-radius: 2px
 
 .avatar
   margin-top: 28px
@@ -118,11 +132,7 @@ a:hover
   text-decoration: none
   color: white
 
-.avatar
-  background: url(coffee.jpeg)
-
 .footer
-  border: 1px solid red
   background: #333333
   height: 89px
   text-align: center
