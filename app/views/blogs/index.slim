@@ -1,43 +1,8 @@
-.row#nav-bar
-  .col-md-1.nav-left
-    | PM
-
-  .col-md-11.nav-right
-    = link_to 'HOME', root_path 
-    a href="/#about_me" ABOUT ME 
-    a href="/#contact" CONTACT  
-    a href="blogs#index" BLOG
-    a PORTFOLIO  
-    a LOGIN 
-    a REGISTER
+= render 'shared/navbar'
 hr
 #wrapper
   #columns
-    a.pin
-      img src="https://cdn.pixabay.com/photo/2015/06/08/15/11/camera-801924_1280.jpg"
-      p 
-        |I'm a sample blog
-
-    a.pin
-      img src="https://cdn.pixabay.com/photo/2015/06/08/15/11/camera-801924_1280.jpg"
-      p 
-        | I'm a sample blog
-    a.pin
-      img src="https://cdn.pixabay.com/photo/2015/06/08/15/11/camera-801924_1280.jpg"
-      p 
-        | I'm a sample blog
-
-    a.pin
-      img src="https://cdn.pixabay.com/photo/2015/06/08/15/11/camera-801924_1280.jpg"
-      p 
-        | I'm a sample blog
-
-    a.pin
-      img src="https://cdn.pixabay.com/photo/2015/06/08/15/11/camera-801924_1280.jpg"
-      p 
-        | I'm a sample blog
-
-    .pin
-      img src="https://cdn.pixabay.com/photo/2015/06/08/15/11/camera-801924_1280.jpg"
-      p 
-        | I'm a sample blog
+    - @blogs.each do |blog|
+      a href="blogs/#{blog.id}" class="pin"
+        img src="https://cdn.pixabay.com/photo/2015/06/08/15/11/camera-801924_1280.jpg"
+        = blog.title

@@ -1,18 +1,7 @@
-.container
+.container#homepage
   .col-md-12
     .row
-      .row#nav-bar
-        .col-md-1.nav-left
-          | PM
-
-        .col-md-11.nav-right
-          = link_to 'HOME', root_path 
-          a href="#about_me" ABOUT ME 
-          a href="#contact" CONTACT  
-          a href="blogs#index" BLOG
-          a PORTFOLIO  
-          a LOGIN 
-          a REGISTER
+      = render 'shared/navbar'
       .row
         .wrapper
           .container.home
@@ -20,7 +9,7 @@
               h1 Preston Matheson
               h3 Developer & Photographer
               .btns           
-                a href="#about_me" class="btn btn-default btn-lg" MORE ABOUT ME
+                a href="#about_me" class="btn btn-default btn-lg" More About Me
           
       .row
         #about_me

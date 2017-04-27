@@ -1,0 +1,12 @@
+= render 'shared/navbar'
+.blog-background
+  .blog-post
+    .blog-post-title-background
+      .blog-post-title     
+        = @page_title.upcase
+    .blog-content
+      p
+        = @seo_keywords
+      .back-btn
+        a href="/blogs" class="btn btn-lg btn-primary blogs-show-btn"
+          | Back
