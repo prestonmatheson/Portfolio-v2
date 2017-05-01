@@ -1,6 +1,15 @@
 = render 'shared/navbar'
 hr
 #wrapper
+  .blog-masthead
+    h1 Blog Page Title Here
+  .featured-posts-text
+    .white-background
+      | FEATURED POSTS
+  .featured-posts
+    h1 I'm filler content
+  .admin_blogs.btn.btn-primary
+    | New Post
   #columns
     - @blogs.each do |blog|
       a href="blogs/#{blog.id}" class="pin"
