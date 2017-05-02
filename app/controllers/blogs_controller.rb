@@ -11,18 +11,45 @@ class BlogsController < ApplicationController
   end
 
   def new
+    @blog = Blog.new
+  end
+
+  def edit
+    @blog = Blog.find(params[:id])
   end
 
   def create
-    @blog = Blog.new(params[:blog].permit(blog_params))
+    @blog = Blog.new(blog_params)
 
-    @blog.save
-    redirect_to @blog
+    respond_to do |format|
+      if @blog.save
+        format.html { redirect_to @blog, notice: 'Your post is now live.' }
+      else
+        format.html { render :new }
+      end
+    end
+  end
+
+  def update
+    @blog = Blog.find(params[:id])
+   
+    if @blog.update(blog_params)
+      redirect_to @blog
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+    @blog = Blog.find(params[:id])
+    @blog.destroy
+   
+    redirect_to blogs_path
   end
 
   private 
 
-  def blog_params
-    params.require(:blog).permit(:title, :body, :topic_id, :status)
-  end
+    def blog_params
+      params.require(:blog).permit(:title, :body)
+    end
 end

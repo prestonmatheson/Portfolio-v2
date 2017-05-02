@@ -5,13 +5,14 @@ hr
     h1 Blog Page Title Here
   .featured-posts-text
     .white-background
-      | FEATURED POSTS
+      | LATEST POST
   .featured-posts
     h1 I'm filler content
-  .admin_blogs.btn.btn-primary
-    | New Post
+  a href="blogs/new"
+    .admin_blogs.btn.btn-primary
+      | New Post
   #columns
     - @blogs.each do |blog|
       a href="blogs/#{blog.id}" class="pin"
-        img src="https://cdn.pixabay.com/photo/2015/06/08/15/11/camera-801924_1280.jpg"
+        img src="https://cdn.pixabay.com/photo/2017/04/05/01/14/food-2203697_1280.jpg"
         = blog.title

@@ -1,0 +1,28 @@
+<%= form_for :blog, url: blogs_path do |f| %>
+ 
+  <% if @blog.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@blog.errors.count, "error") %> prohibited
+        this blog from being saved:
+      </h2>
+      <ul>
+        <% @blog.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+  <div class="form_group">
+    <%= f.text_field :title, class: 'form-control', placeholder: 'Title' %>
+  </div> 
+  <div class="form_group">
+    <%= f.text_area :body, class: 'form-control', rows: 15, placeholder: 'Content' %>
+  </div>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+ 
+<% end %>
