@@ -1,18 +1,21 @@
-= render 'shared/navbar'
-.blog-background
-  .blog-post
-    .blog-post-title-background
-      .blog-post-title     
-        = @page_title.upcase
-    .blog-content
-      p
-        = @seo_keywords
-      .back-btn.col-md-6
-        a href="/blogs" class="btn btn-lg btn-primary blogs-show-btn"
-          | Back
-      .edit-btn.col-md-6
-        a href="#{@blog.id}/edit" class="btn btn-lg btn-primary blogs-show-btn"
-          | Edit
-      = link_to 'Destroy', blog_path(@blog),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } 
+.container
+  = render 'shared/navbar'
+  .blog-background
+    .blog-post
+      .blog-post-title-background
+        .blog-post-title     
+          = @page_title.upcase
+      .blog-content
+        p
+          = @seo_keywords
+        .back-btn.col-md-6
+          a href="/blogs" class="btn btn-lg btn-primary blogs-show-btn"
+            | Back
+        .edit-btn.col-md-6
+          a href="#{@blog.id}/edit" class="btn btn-lg btn-primary blogs-show-btn"
+            | Edit
+        = link_to 'Destroy', blog_path(@blog),
+                method: :delete,
+                data: { confirm: 'Are you sure?' },
+                class: "btn btn-lg btn-primary blogs-delete-btn"
+
