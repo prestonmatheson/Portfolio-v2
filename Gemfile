@@ -17,7 +17,6 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'petergate'
 gem 'petergate_api'
-gem 'pry-rails'
 gem 'annotate'
 gem 'slim-rails'
 gem 'bootstrap-sass'
@@ -48,3 +47,4 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.1'
+gem 'carrierwave', '~> 1.0'

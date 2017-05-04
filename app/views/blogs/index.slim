@@ -7,14 +7,14 @@
       .white-background
         | LATEST POST
     .featured-posts
-      = @blogs.first.main_image
+      = image_tag blog_img(@blogs.last.main_image, "main"), width: '100%', class: "featured-img"
     a href="blogs/new"
       .admin_blogs.btn.btn-primary
         | New Post
     #columns
       - @blogs.each do |blog|
         a href="blogs/#{blog.id}" class="pin"
-          = image_tag  blog_img(blog.main_image, "main"), width: '100%'
+          = image_tag blog_img(blog.main_image, "main"), width: '100%'
           = blog.title
 
           / <%= image_tag portfolio_img(portfolio_item.thumb_image, 'thumb'), width: '100%' %>
