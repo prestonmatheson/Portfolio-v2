@@ -1,0 +1,7 @@
+.container
+  h1 Images index page
+  #columns
+    - @images.each do |image|
+      a href="images/#{image.id}" class="pin"
+        = image_tag image.image
+    end

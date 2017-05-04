@@ -1,0 +1,8 @@
+.container
+  h1 Albums index page
+  #columns
+    - @albums.each do |album|
+      a href="albums/#{album.id}" class="pin"
+        = image_tag album.thumb_image
+        = album.title 
+    end

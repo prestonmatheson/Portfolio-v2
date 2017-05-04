@@ -7,7 +7,13 @@
       .white-background
         | LATEST POST
     .featured-posts
-      = image_tag blog_img(@blogs.last.main_image, "main"), width: '100%', class: "featured-img"
+      .col-md-4.featured-blogs-image
+        = image_tag blog_img(@blogs.last.main_image, "main"), width: '100%', class: "featured-img"
+      .col-md-8
+        .row.latest_blog_title
+          = @blogs.last.title
+        .row.latest_blog_summary
+          = @blogs.last.body
     a href="blogs/new"
       .admin_blogs.btn.btn-primary
         | New Post

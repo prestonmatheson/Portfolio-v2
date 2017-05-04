@@ -6,3 +6,20 @@
 end
 
 puts "10 blog posts created"
+
+10.times do |album|
+  Album.create!(
+    title: "My Album #{album}",
+    thumb_image: "foggy.jpg"
+    )
+end
+
+puts "10 Albums created"
+
+10.times do |image|
+  Image.create!(
+    image: "coffee.jpeg"
+    )
+end
+
+puts "10 Images added for albums"
