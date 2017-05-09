@@ -47,8 +47,8 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.1'
+gem 'mini_magick'
 gem 'carrierwave', '~> 1.0'
-gem "mini_magick"
 gem 'fog'
 gem 'figaro', '~> 1.1', '>= 1.1.1'
 gem 'unf', '~> 0.1.4'

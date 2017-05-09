@@ -8,7 +8,7 @@
         | LATEST POST
     .featured-posts
       .col-md-4.featured-blogs-image
-        = image_tag blog_img(@blogs.last.main_image, "main"), width: '100%', class: "featured-img"
+        = image_tag blog_img(@blogs.last.main_image.url, "main"), class: "featured-img"
       .col-md-8
         .row.latest_blog_title
           = @blogs.last.title
@@ -20,7 +20,7 @@
     #columns
       - @blogs.each do |blog|
         a href="blogs/#{blog.id}" class="pin"
-          = image_tag blog_img(blog.main_image, "main"), width: '100%'
+          = image_tag blog_img(blog.main_image.url, "main"), width: '100%'
           = blog.title
 
           / <%= image_tag portfolio_img(portfolio_item.thumb_image, 'thumb'), width: '100%' %>
