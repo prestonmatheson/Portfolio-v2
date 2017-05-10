@@ -1,1 +1,10 @@
-<h1>I'm the project index</h1>
+<div class="album text-muted">
+  <div class="container">
+    <%= render 'shared/navbar'%>
+    <%= source_helper("alert alert-warning") %>
+
+    <div class="row">
+      <%= render partial: 'portfolio_item', collection: @portfolio_items %>
+    </div>
+  </div>
+</div>

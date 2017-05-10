@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :albums
   root to: 'pages#home'
   resources :blogs
+  get 'projects/:id', to: 'projects#show', as: 'project_show'
 end

@@ -8,7 +8,8 @@
         | LATEST POST
     .featured-posts
       .col-md-4.featured-blogs-image
-        = image_tag blog_img(@blogs.last.main_image.url, "main"), class: "featured-img"
+        .featured-img
+          = image_tag blog_img(@blogs.last.main_image.profile_size.url, "main")
       .col-md-8
         .row.latest_blog_title
           = @blogs.last.title
