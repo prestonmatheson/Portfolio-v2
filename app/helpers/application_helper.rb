@@ -5,4 +5,16 @@ module ApplicationHelper
       content_tag(:div, greeting.html_safe, class: styles)
     end
   end
+
+  def alerts
+    alert = (flash[:alert] || flash[:error] || flash[:notice])
+
+    if alert 
+      alert_generator alert
+    end
+  end
+
+  def alert_generator msg
+    js add_gritter(msg, title: "Preston Matheson's Portfolio", sticky: false)
+  end
 end

@@ -8,7 +8,15 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <%= js add_gritter(flash[:notice], title: "Preston's Portfolio Notification", sticky: false) %>
+
   <body>
+    
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    
     <%= yield %>
+
+    <%= alerts %>
   </body>
 </html>
