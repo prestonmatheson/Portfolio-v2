@@ -46,3 +46,22 @@ end
 end
 
 puts "9 portfolio items created"
+
+User.create!(
+  email: "test@test.com",
+  password: "password",
+  password_confirmation: "password",
+  name: "Admin User",
+  roles: "site_admin"
+  )
+
+puts "1 Admin user created"
+
+User.create!(
+  email: "test2@test.com",
+  password: "password",
+  password_confirmation: "password",
+  name: "Regular User"
+  )
+
+puts "1 regular user created"

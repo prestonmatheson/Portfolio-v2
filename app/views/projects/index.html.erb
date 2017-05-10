@@ -3,7 +3,7 @@
     <%= render 'shared/navbar'%>
     <%= source_helper("alert alert-warning") %>
 
-    <div class="row">
+    <div class="row <%= "sortable" if logged_in?(:site_admin) %>">
       <%= render partial: 'portfolio_item', collection: @portfolio_items %>
     </div>
   </div>
