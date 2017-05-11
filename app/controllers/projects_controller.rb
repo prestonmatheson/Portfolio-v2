@@ -59,7 +59,7 @@ class ProjectsController < ApplicationController
   private
 
   def portfolio_params
-    params.require(:portfolio).permit(:title,
+    params.require(:project).permit(:title,
                                       :subtitle,
                                       :body,
                                       :main_image,
