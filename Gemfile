@@ -54,3 +54,4 @@ gem 'figaro', '~> 1.1', '>= 1.1.1'
 gem 'unf', '~> 0.1.4'
 gem 'pry', '~> 0.10.4'
 gem "gritter", "1.2.0"
+gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
