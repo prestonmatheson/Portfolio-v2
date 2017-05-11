@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'register'}
   resources :projects
   resources :images
   resources :albums
-  root to: 'pages#home'
   resources :blogs
   get 'projects/:id', to: 'projects#show', as: 'project_show'
+  root to: 'pages#home'
 end

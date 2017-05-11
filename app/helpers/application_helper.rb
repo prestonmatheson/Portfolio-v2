@@ -17,4 +17,16 @@ module ApplicationHelper
   def alert_generator msg
     js add_gritter(msg, title: "Preston Matheson's Portfolio", sticky: false)
   end
+
+  def login_helper
+    if current_user.is_a?(GuestUser)
+      (link_to "LOGIN", new_user_session_path) +
+      " ".html_safe +
+      (link_to "REGISTER", new_user_registration_path)
+    else
+      link_to "LOGOUT", destroy_user_session_path, method: :delete
+    end
+  end
 end
+
+
