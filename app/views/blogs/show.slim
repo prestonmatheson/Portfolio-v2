@@ -10,12 +10,10 @@
           = @seo_keywords
         .back-btn.col-md-6
           a href="/blogs" class="btn btn-lg btn-primary blogs-show-btn"
-            | Back
+            | Back 
         .edit-btn.col-md-6
-          a href="#{@blog.id}/edit" class="btn btn-lg btn-primary blogs-show-btn"
-            | Edit
-        = link_to 'Destroy', blog_path(@blog),
-                method: :delete,
-                data: { confirm: 'Are you sure?' },
-                class: "btn btn-lg btn-primary blogs-delete-btn"
-
+          = link_to "Edit", edit_blog_path(@blog), class: "btn btn-lg btn-primary blogs-show-btn" if logged_in?(:site_admin)
+          = link_to 'Destroy', blog_path(@blog),
+                  method: :delete,
+                  data: { confirm: 'Are you sure?' },
+                  class: "btn btn-lg btn-primary blogs-delete-btn" if logged_in?(:site_admin)

@@ -1,4 +1,5 @@
 <div class="container portfolio-container">
+  <%= render "shared/navbar" %>
   <div class="row">
     <div class="col-md-7">
       <%= image_tag portfolio_img(@portfolio_item.main_image, 'main'), width: '100%' %>
@@ -7,11 +8,9 @@
     <div class="col-md-5">
       <h1><%= @portfolio_item.title %></h1>
 
-      <em><%= @portfolio_item.subtitle %></em>
+      <h4><span class="tech">Technologies Used: </span><em><%= @portfolio_item.subtitle %></em></h4>
 
       <p><%= @portfolio_item.body %></p>
-
-      <h2>Technologies Used:</h2>
 
       <% if logged_in?(:site_admin) %> 
         <div class="col-md-12">

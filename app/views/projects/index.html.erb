@@ -2,7 +2,7 @@
   <div class="container">
     <%= render 'shared/navbar'%>
     <%= source_helper("alert alert-warning") %>
-
+    <%= link_to "New Portfolio Item", new_project_path, class: "admin_blogs btn btn-primary" if logged_in?(:site_admin) %>
     <div class="row <%= "sortable" if logged_in?(:site_admin) %>">
       <%= render partial: 'portfolio_item', collection: @portfolio_items %>
     </div>

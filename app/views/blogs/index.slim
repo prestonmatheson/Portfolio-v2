@@ -15,9 +15,7 @@
           = @blogs.last.title
         .row.latest_blog_summary
           = @blogs.last.body
-    a href="blogs/new"
-      .admin_blogs.btn.btn-primary
-        | New Post
+    = link_to "New Post", new_blog_path, class: "admin_blogs btn btn-primary" if logged_in?(:site_admin)
     #columns
       - @blogs.each do |blog|
         a href="blogs/#{blog.id}" class="pin"
