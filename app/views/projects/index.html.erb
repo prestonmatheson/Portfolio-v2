@@ -1,6 +1,11 @@
 <div class="album text-muted">
   <div class="container">
     <%= render 'shared/navbar'%>
+    <div class="blog-masthead">
+      <h1>
+        My Projects!
+      </h1>
+    </div>
     <%= source_helper("alert alert-warning") %>
     <%= link_to "New Portfolio Item", new_project_path, class: "admin_blogs btn btn-primary" if logged_in?(:site_admin) %>
     <div class="row <%= "sortable" if logged_in?(:site_admin) %>">
